@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS3</title>
+<style type="text/css">
+	div{
+	    position:relative;
+	    width:0;height:0;
+	    border:100px solid red;
+	    margin:100px auto;
+	    transform:rotate(-45deg);
+	}
+	div:before{
+	    position:absolute;
+	    content:"";
+	    width:0;height:0;
+	    border:100px solid red;
+	    border-radius:100px;
+	    margin:-100px auto;
+	}
+	div:after{
+	    position:absolute;
+	    content:"";
+	    left: -100px;
+
+	    width:0;height:0;
+	    border:100px solid red;
+	    border-radius:100px;
+	    margin:-200px auto;}
+</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

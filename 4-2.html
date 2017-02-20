@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>4-2</title>
+<style type="text/css">
+/*sky*/
+  .sky{ 
+    width: 100%;
+    height: 220px;
+        background: -webkit-linear-gradient(rgba(196,228,253,1),rgba(196,228,253,0.01));
+        background:    -moz-linear-gradient(rgba(196,228,253,1),rgba(196,228,253,0.01));
+        background:     -ms-linear-gradient(rgba(196,228,253,1),rgba(196,228,253,0.01));
+        background:      -o-linear-gradient(rgba(196,228,253,1),rgba(196,228,253,0.01));
+        background:         linear-gradient(rgba(196,228,253,1),rgba(196,228,253,0.01));
+  }
+
+/*wind*/
+  .wind{
+    width: 0px;
+        height: 0px;
+        margin: 0 100px;
+        position: relative;
+        display: block;
+        color: #000;
+        border:50px solid #fff;
+        border-radius: 50px;
+  }
+  .wind::before {
+    width: 120px;
+        height: 0px;
+        position: absolute;
+        content: '';
+        display: block;  
+        top:-10px; 
+        right:-70px;   
+        color: #000;
+        border:25px solid #fff;
+        border-radius: 30px;
+    }
+    .wind::after {
+    width: 25px;
+        height: 0px;
+        margin: 0 100px;
+        position: absolute;
+        content: '';
+        display: block; 
+        top:-20px; 
+        right:-100px;      
+        color: #000;
+        border:30px solid #fff;
+        border-radius: 35px;        
+        -webkit-transform: rotate(35deg);
+           -moz-transform: rotate(35deg);
+            -ms-transform: rotate(35deg);
+             -o-transform: rotate(35deg);
+                transform: rotate(50deg);
+    }
+    .one{
+        -webkit-animation:fly 12s linear   infinite;
+                animation:fly 12s linear   infinite;
+        -webkit-transform:translate(14rem, 2rem)  scale(.7,.7);
+           -moz-transform:translate(14rem, 2rem)  scale(.7,.7);
+            -ms-transform:translate(14rem, 2rem)  scale(.7,.7);
+             -o-transform:translate(14rem, 2rem)  scale(.7,.7);
+                transform:translate(14rem, 2rem)  scale(.7,.7);
+    }
+    .two{
+        opacity:0.6;
+        -webkit-animation:fly 15s linear   infinite;
+                animation:fly 15s linear   infinite;
+        -webkit-transform:translate(26rem, -7rem) scale(.5,.5);          
+           -moz-transform:translate(26rem, -7rem) scale(.5,.5);          
+            -ms-transform:translate(26rem, -7rem) scale(.5,.5);          
+             -o-transform:translate(26rem, -7rem) scale(.5,.5);          
+                transform:translate(26rem, -7rem) scale(.5,.5);          
+    }
+    .three{
+        opacity:0.9;
+        -webkit-animation:fly 10s linear   infinite;
+                animation:fly 10s linear   infinite;
+        -webkit-transform:translate(6rem, -13rem) scale(.5,.5);
+           -moz-transform:translate(6rem, -13rem) scale(.5,.5);
+            -ms-transform:translate(6rem, -13rem) scale(.5,.5);
+             -o-transform:translate(6rem, -13rem) scale(.5,.5);
+                transform:translate(6rem, -13rem) scale(.5,.5);
+    }
+    .four{
+        opacity:0.6;
+        -webkit-animation:fly 8s linear   infinite;
+                animation:fly 8s linear   infinite;
+        -webkit-transform:translate(9rem, -13rem) scale(.5,.5);
+           -moz-transform:translate(9rem, -13rem) scale(.5,.5);
+            -ms-transform:translate(9rem, -13rem) scale(.5,.5);
+             -o-transform:translate(9rem, -13rem) scale(.5,.5);
+                transform:translate(9rem, -13rem) scale(.5,.5);
+    }
+    .five{
+        opacity:0.9;
+        -webkit-animation:fly 6s linear  infinite;
+                animation:fly 6s linear  infinite;
+        -webkit-transform:translate(21rem, -20rem) scale(.3,.3);
+           -moz-transform:translate(21rem, -20rem) scale(.3,.3);
+            -ms-transform:translate(21rem, -20rem) scale(.3,.3);
+             -o-transform:translate(21rem, -20rem) scale(.3,.3);
+                transform:translate(21rem, -20rem) scale(.3,.3);
+    }
+
+    @-webkit-keyframes fly {
+    from {left:  100%; }
+    to   {left:  -30%; }
+    }
+
+/*grass*/
+  .grass{
+        position:relative;
+      width: 100%;
+      height: 180px;
+        background: -webkit-linear-gradient(rgba(148,190,89,.01),rgba(148,190,89,1));
+        background:    -moz-linear-gradient(rgba(148,190,89,.01),rgba(148,190,89,1));
+        background:     -ms-linear-gradient(rgba(148,190,89,.01),rgba(148,190,89,1));
+        background:      -o-linear-gradient(rgba(148,190,89,.01),rgba(148,190,89,1));
+        background:         linear-gradient(rgba(148,190,89,.01),rgba(148,190,89,1));
+  }
+
+/*rabibt*/
+    img{
+    width:200px;
+    height:200px;
+    position: absolute;
+    right:200px;
+    bottom: 50px;  
+    }
+</style>
+</head>
+<body>
+<div class="sky">
+  <div class="wind one"></div>
+  <div class="wind two"></div>
+  <div class="wind three"></div>
+  <div class="wind four"></div>
+  <div class="wind five"></div>
+</div>
+<div class="grass" >
+    <img src="image/rabbit.png"></img>
+</div>
+</body>
+</html>
