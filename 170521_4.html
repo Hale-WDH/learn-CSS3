@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>A Three-Column Fluid Center Layout</title>
+	<style>
+		* {margin:0; padding:0;}
+		body {font:1em helvetica, arial, sans-serif;}
+		div#main_wrapper{
+			min-width:600px; max-width:1100px; 
+			/*超过最大宽度时，居中布局*/
+			margin:0 auto;
+			/*背景图片默认从左上角开始拼接*/
+			background:url(images/bg_tile_150pxw.png) repeat-y #eee;
+		}
+		header {
+		    padding:5px 10px;
+		    background:#3f7ccf;
+		    font-size: 3em;
+		}
+		div#threecolwrap {
+			/*浮动，强制它包围浮动的栏*/
+			float:left;
+			width:100%;
+			/*背景图片右对齐*/
+			background:url(images/bg_tile_210pxw.png) top right repeat-y;
+		}
+		div#twocolwrap {
+			/*浮动，强制它包围浮动的栏*/
+			float:left;
+			width:100%;
+			/*把右栏拉到区块外边距腾出的位置上*/
+			margin-right:-210px;
+		}
+		nav {
+		    float:left;
+		    width:150px;
+		    background:#f00;
+		    padding:20px 0;
+		} 
+		/*让子元素与边界保持一定距离*/
+		nav > * {margin:0 10px;}
+		article {
+			width:auto;
+			margin-left:150px; 
+			/*在流动居中的栏右侧腾出空间*/
+			margin-right:210px; 
+			background:#eee;
+			padding:20px 0;
+		}  
+		/*让子元素与边界保持一定距离*/
+		article > * {margin:0 20px;} 
+		aside {
+		    float:left;
+		    width:210px;
+		    background:#ffed53;
+		    padding:20px 0;
+		} 
+		/*让子元素与边界保持一定距离*/
+		aside > * {margin:0 10px;} 
+		footer {
+			clear:both; width:100%; text-align:center; background:#000;color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="main_wrapper">
+		<header>
+			A Three-Column Fluid Center Layout<!-- 页 --> 
+		</header>
+		<div id="threecolwrap"> <!-- 三栏外包装 -->
+			<div id="twocolwrap"><!-- 两栏外包装(包括左栏和中栏) -->
+				<!-- 左栏 -->
+				<nav>
+					<div>
+						If the email address used for the commit hasn't been added to your GitHub profile, you must add the email address to your GitHub account.<!-- 导航 -->
+					</div>
+				</nav>
+				<!-- 中栏 -->
+				<article>
+					<div>
+						Your profile contributions graph is a record of contributions you've made to GitHub repositories. Contributions are timestamped according to Coordinated Universal Time (UTC) rather than your local time zone. Contributions are only counted if they meet certain criteria. In some cases, we may need to rebuild your graph in order for contributions to appear.Your profile contributions graph is a record of contributions you've made to GitHub repositories. Contributions are timestamped according to Coordinated Universal Time (UTC) rather than your local time zone. Contributions are only counted if they meet certain criteria. In some cases, we may need to rebuild your graph in order for contributions to appear.Your profile contributions graph is a record of contributions you've made to GitHub repositories. Contributions are timestamped according to Coordinated Universal Time (UTC) rather than your local time zone. Contributions are only counted if they meet certain criteria. In some cases, we may need to rebuild your graph in order for contributions to appear.<!-- 区块 -->
+					</div>
+				</article>
+			</div><!-- 结束两栏外包装 -->
+			<!-- 右栏 -->
+			<aside>
+				<div>
+					If the email address used for the commit hasn't been added to your GitHub profile, you must add the email address to your GitHub account.
+				</div>
+			</aside>
+		</div><!-- 结束三栏外包装 -->
+		<footer>
+			Why are my contributions not showing up on my profile?<!-- 页脚 -->
+		</footer>
+	</div>
+</body>
+</html>
