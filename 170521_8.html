@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>横向菜单</title>
+	<style>
+		.list1 ul {
+			overflow:hidden;/*强制ul包围浮动的li元素*/
+		}
+		.list1 li {
+			float:left;/*让li元素水平排列*/
+			list-style-type:none;/*去掉项目符号*/
+		}
+		.list1 a {
+			display:block; /*让链接填满li元素*/
+			padding:0 16px;
+			text-decoration:none; /*去掉链接下划线*/
+			color:#999;
+		}
+		.list1 li + li a {border-left:1px solid #aaa;}
+		.list1 a:hover {color:#555;}
+	</style>
+</head>
+<body>
+	<nav class="list1">
+        <ul>
+           <li><a href="#">Shirts</a></li>
+           <li><a href="#">Pants</a></li>
+           <li><a href="#">Dresses</a></li>
+           <li><a href="#">Shoes</a></li>
+           <li><a href="#">Accessories</a></li>
+		</ul> 
+	</nav>
+</body>
+</html>
