@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <textarea col="10" id="text01"></textarea>
+    <button onclick="change()">变变变</button>
+    <script>
+        function change(){
+            var origin = document.getElementById("text01").value;
+            var text = origin.split('');
+            for(i=0;i<text.length;i++){
+                if(text[i]=="{") text[i] = text[i]+"<br>"+"         ";
+                if(text[i]==";") text[i] = text[i]+"<br>"+"         ";
+                if(text[i]=="}") text[i] = "<br>"+text[i]+"<br><br>";
+            }
+            text = text.join("");
+            document.write(text);
+        }
+    </script>
+</body>
+</html>
